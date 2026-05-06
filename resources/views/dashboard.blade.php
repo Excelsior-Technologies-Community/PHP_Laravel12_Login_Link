@@ -1,17 +1,32 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+<!DOCTYPE html>
+<html>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
+<head>
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="bg-white p-10 rounded-xl shadow text-center">
+
+        <h1 class="text-2xl font-bold text-green-600 mb-3">
+            Welcome to Dashboard 🎉
+        </h1>
+
+        <p class="text-gray-600 mb-5">
+            You are successfully logged in using Magic Link
+        </p>
+
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button class="bg-red-500 text-white px-5 py-2 rounded">
+                Logout
+            </button>
+        </form>
+
     </div>
-</x-app-layout>
+
+</body>
+
+</html>
