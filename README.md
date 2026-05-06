@@ -371,4 +371,7 @@ PHP_Laravel12_Login_Link/
 ```
 
 Your PHP_Laravel12_Login_Link Project is now ready!
+<<<<<<< HEAD
 
+=======
+>>>>>>> development
